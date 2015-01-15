@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN” “http://www.w3.org/TR/html4/loose.dtd”>
+
+
+<!--- PAGE 640  -->
+
+
+<!-- Want to add a document type line at the top to indicate the version of html being used.-->
+<!--You can validate HTML code with an online w3c verifier -->
+<!-- There are transistional and strict versions of html-->
+
+<!-- HTML Documents are started with the html tag-->
+<html> 
+<!-- if using XHTML, you would XML root attributes to <html>. ALso all empty tags would be ended with /> -->
+<!-- using XHTML new elements can be used for more in-depth uses -->
+<!-- all elements must be lowercase in xhtml -->
+<!-- in XHTML all attributes must have values enclosed in double quotes -->
+	<!-- HTML CODE -->
+
+
+<!-- When displaying block elements, the browser starts at the top, and then goes down, adding each successive block element with a line break
+Inline elements are placed side-to-side if there is room, or wrapping around the available area
+If there are 2 inline elements next to each other, browser gives enough room for both margins
+If there are 2 block elements together, the size of the margin is the larger of the two 
+Two vertical margins will collapse, even if one of the elements is nested within the other. The excepton is if there is a border
+-->
+
+<!--
+Forms follow this flow:
+user fills out form on browser -> browser packages data and sends to server -> server recieves data and passes to web app for processing -> web app processes data and generates new page -> page sent back up the chain to the user
+-->
+
+<!-- The head of an HTML document is contained in the head tags -->
+<head>
+<!-- within head you can put the title tag - specifies the title of the page which appears at the top of the tab or browser window -->
+<title>
+This is the page title.
+</title>
+
+<!-- You can add css styling to a page using the style tag and type attribute to specify that css is used -->
+<style type="text/css">
+	body{
+		background-color: #d2b48c;
+		font-family: sans-serif;
+	}
+</style>
+<!-- Background-color sets the color of the page background
+	 margin-direction - sets the width of the margin in that direction
+	 padding - adds padding around the body of the page
+	 font-family - sets the font used by the page
+	 border - surrounds the body with the specified border.
+-->
+<!-- By using body{} you specify the css only applies to the body tag
+-->
+
+<!-- Instead of using the style tag, you can add a stylesheet to the head, and make changes in the .css file -->
+<link rel="stylesheet" type="text/css" href="learn_script.css" />
+<!-- You can also have multiple stylesheets. These are evaluated in order, so subsequent style sheets can override rules defined in earlier style sheets -->
+<!-- you can also add a media attribute which will specify what devices the stylesheet should be used for: screen, handheld, print, etc. -->
+<link rel="stylesheet" type="text/css" href="stylesheet_mobile.css" media="handheld" />
+
+<!-- You can add meta tags here - they tell the browser something about the page - for example the character set -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+</head>
+
+<!-- page content goes into the body tag-->
+<body>
+
+<!-- You can use different levels of headings going from h1 to h6 in decreasing size and intensity -->
+<h1>
+	THis is a level 1 heading
+</h1>
+<h2>
+This is a level 2 heading.
+</h2>
+
+<del>
+	Indicates stuff that should be deleted
+</del>
+
+<ins>
+	Indicates stuff that should be inserted
+</ins>
+
+<!-- By adding the class attribute we can define rules specific for that class. -->
+<h1 class="test_class">
+	This is a header 1 part of class test_class
+</h1>
+<!-- can also have multiple classes -->
+<h1 class="test_class second_test_class third_test_class">
+	So many classes
+</h1>
+
+<!-- In the same way, if you have an element that you want to define in a 
+unique rules for, use id -->
+<h1 id="test_id">
+	This is a header that is identified as test_id. It is the only one who will use the rules defined for id=test_id
+</h1>
+
+
+<!-- To include an image in the page, you can use an img tag. You combine the tag with the src attribute to specify the source of the image -->
+<img src="some_image.gif" />
+<!-- Can also use a full length URL or a relative path -->
+<!-- Before an image can be displayed, it has to be retrieved by the browser -->
+<!-- Mainly use JPGs and GIFs on the web. JPEG usually used for photos and complex graphics, while GIFs are for solid color images, logos, and shapes. ALso have PNGs but they may not be fully supported -->
+<!-- you can use the alt attribute to provide some text about the image, like a description. THis can be used if the image itself cannot be displayed. -->
+<img src="some_image.gif" alt="This is some image " >
+<!-- YOu can also use the height and width attributes to indicate the size of the image to the browser. Values are in pixels-->
+<img src="some_image.gif" width="56" height="200">
+<!-- This can decrease the load time for pages as it allows the browser to plan out the page before downloading the image. Can also be used to scale the image - but this isn't a good idea.
+ Some images will have a matte to soften transistions between image color and background - this may cause an outline to appear around the image-->
+<!-- under strict html, need to have inline elements like img within a block element
+ALso the only thing allowed within inline elements are other inline elements
+-->
+
+
+<!-- you can have paragraphs of text using the p tag -->
+<p>
+	Blah Blah Blah
+</p>
+
+<!-- You can provide emphasis to text using the em tag -->
+<em> This text is emphasised </em><br>
+<!-- If you want extra emphasis you can use the strong tag -->
+<strong> SUPER EMPHASIS </strong>
+<br><br>
+<!-- You can specify an address with address tag -->
+<address> 532 Main St. Wonderville, WA </address><br>
+
+<!-- if you have formatted text that you want displayed exactly as it is written, use the pre tag -->
+<pre> some text </pre>
+
+<!-- If you want a horizontal rule to start a new section without a heading, use the hr tag -->
+<hr>
+
+<!-- TO display code from a program use the code tag -->
+<code>
+public static void main(String[] args){<br>
+	System.out.println("Hello World");<br>
+}
+</code>
+<br>
+<!-- You can add quotes with the q tag - some browsers don't support it though-->
+<q> This is a quotes </q>
+
+<!-- To display longer quotes that should be displayed on their own use blockquotes -->
+<blockquote> This is a long quotation </blockquote>
+<!-- you can also put paragraphs into the <blockquote> -->
+<!-- everything in a blockquote has to be enclosed by another block element, so the above is wrong. Instead do this: -->
+<blockquote><p>THis is a long quotation</p></blockquote>
+
+<!-- 2 types of elements 
+		block elements stand out on their own like h1, p, blockquote with line breaks between other elements
+		inline elements go with the element they are currently in like a, em, q
+-->
+
+<!-- To create lists:
+	 You can have ordered and unordered lists. To create lists first use the ol or ul tags, respectively. 
+	 Then to add list elements, add them in using li elements
+	 ul and ol only work with the li, you can't use other elements inside them
+-->
+<ol>
+	<li>List element 1</li>
+	<li>List element 2</li>
+	<li>List element 3</li>
+</ol>
+<br>
+<ul>
+	<li>Unordered List element 1</li>
+	<li>Unordered List element 2</li>
+	<li>Unordered List element 3</li>
+</ul>
+<!-- You can also have definition lists - these are lists where you give a
+	  term and then supply the definition
+	 TO start the list use the dl element
+	 To add the term, you use the <dt> element
+	 Afer the <dt> term, you add a <dd> which is the definition of the term
+-->
+<dl>
+	<dt> dt elemnt 1</dt>
+	<dd> description</dd>
+	<dt> def 2</dt>
+	<dd>some def</dd>
+</dl>
+
+<!-- to add linebreaks into the page use the br element -->
+<br>
+
+<!-- If you want to use special characters like <, >, & you can use character entities -->
+This is a greater than symbol: &gt;, a less than sybmol: &lt;, and an ampersand: &amp;
+<!-- Many more characters can be displayed. However, it requires that the font has been installed on the computer -->
+
+<!--To link to other pages use the a tag with the href attribute -->
+<a href="somepage.html">This link goes to some page</a>
+<!-- You can also put an image between the <a> tags, and make an image clickable
+	 href links based on relative paths. To go up to a parent folder use ../further_path 
+	 Paths have a limit of 255 characters
+-->
+<!-- You can also link to anchors in another page
+	You do this by creating the anchor on the destination page: -->
+<a id="an_anchor"> Some text </a>
+<!-- Then you can link to the anchor with a href tag -->
+<a href="somepage.html#an_anchor">link </a>
+<!-- you can also open a link in a new window. If you use the target attribute, you can specify the target window. If you use _blank as the target, it will always open a new window.-->
+<a target="_blank" href="somepage.html"> link </a>
+<!-- You can also use a specific name to send pages to a specific window-->
+<!-- you cannot nest a elements. You can nest most of the other inline elements-->
+<!-- The style of an a element changes with its state (unvisited, visited, hovered, clicked, etc.) -->
+
+<!-- Attributes:
+		Used to specify additional information about an element
+		an example:
+		no specification
+		-->
+<car>My Red Mini</car>
+<!--	Specified: -->
+<car make="BMW" model="Mini Cooper" convertible="no">My Red Mini</car>
+
+
+<!-- DIVS -->
+<!-- Divs can be used to group different parts of elements together. On their own, they are just containers, but they can be used to add strcutre into a page, and styling of sections -->
+<div id="some_div">
+	<p>
+		asfgasdf
+	</p>
+	<h1>
+		some title
+	</h1>
+</div>
+
+<!-- SPANS -->
+<!-- Spans allow you to control inline elements in the same way that div elements control block elements -->
+<p> Some text <span class="italic">make this text italic</span></p>
+<!-- Can set margin, width, and padding on inline elements - but they will work a bit differently. Images behave more like block elements in regards to those properties -->
+
+
+
+<!-- TABLES -->
+<!-- To represent tabular data you can use  a table: -->
+<table>
+	<tr>	<!-- This is a table row -->
+		<th> Column 1 </th>	<!-- th stands for table heading - the heading of the column -->
+		<th> Column 2 </th>
+	</tr>
+	<tr>
+		<td rowspan="2"> Data 1 </td> <!-- td is the table data/cell - rowspan determines how many rows the cell will span -->
+		<td colspan="2"> Data 2 </td> <!-- colspan spans columns. be sure to make sure you have the correct amount of cell spaces in both rows and columns -->
+	</tr>
+</table>
+<!-- Can have a summary tag which will be used by screen readers and other accessability equipment -->
+<table summary="some table summary">
+<!-- can also have a caption tag which is usually displayed above the table. Can change position caption with css -->
+	<caption>
+		blah blah
+	</caption>
+</table>
+<!-- can also nest tables within each other -->
+
+
+<!-- FORMS -->
+<form action="www.server_you_are_sending_the_data_to.com/application_that_will_process_data.php" method="POST">
+<!-- POST packages up data and sends to web app -->
+<!-- GET just appends data to URL -->
+<!-- the only way users would be able to bookmark results from a form submission is if GET is used. Usually don't want to use GET with textarea since there is a limit of 256 characters for GET. Also never use GET with passwords since everything is plaintext in the url -->
+blah blah
+<input type="text" name="data_value_key" value="initial_value" maxlength="100" /> <!-- maxlength limits numbre of chars. Not available for textarea-->
+<input type="submit" value="enter"/> <!--value determines button text. Default is Submit -->
+<input type="radio" name="hotornot" value="hot" />
+<input type="radio" name="hotornot" value="not" />
+<input type="checkbox" name="spice" value="salt" checked="checked" /> <!-- indicates already selected. Different checkboxes with the same name get grouped together when posted -->
+
+<textarea name="comments" rows="10" cols="48">any initial text</textarea>
+
+<select name="chars" multiple="multiple"> <!-- multiple selection allows for inputting several choices -->
+	<option value="a">Tom</option>
+	<option value="b">Bill</option>
+	<option value="c">Ted</option>
+</select>
+
+<fieldset>
+	<!-- used to group together common elements. Often used with legend: -->
+	<legend>Title_of_section</legend>
+</fieldset>
+
+<!-- You can use labels to define plain text - helps with accessability -->
+<label> Enter your name: </label>
+<input type="text" />
+
+<!-- passowrds -->
+<input type="password" value="pass" /> <!-- hides the password from view - but data sent from browser to server is not secure by default -->
+
+<!-- To input a file, you can use: -->
+<input type="file" name="doc" />
+
+
+</body>
+
+
+
+
+</html>
