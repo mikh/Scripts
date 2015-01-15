@@ -224,6 +224,26 @@ a{
 	color:red;	/* makes all states be red */
 }
 
+/* Psuedo-elements are similar to psuedo-classes in that they select pieces of elements that are not easy to
+wrap in div or span */
+p:first-letter{
+	font-size: 3em;	/*makes the first letter large */
+}
+p:first-line{
+	font-style: italic;
+}
+
+/* attribute selectors allow you to select elements based on their attrbutes */
+img[width] {border:black thin solid;}	/*selects all elements with a width attribute in the html */
+img[height="300"]{border:red thin solid;}	/*selects all elements that have a height attrbiute set to 300*/
+img[alt~="flowers"] {border:#ccc thin solid;} /* selects all elements that have an alt attribute whose value includes "flowers" */
+
+/*select by sibling:
+ select elements based on their preceding sibling */
+ h1+p{
+ 	font-style: italic;	/*select p elements that have an h1 preceding them */
+ }
+
 
 /* FLOATS 
 floats allow you to position your elements so your other elements flow around it. Must be specified with a width. Can float left or right
