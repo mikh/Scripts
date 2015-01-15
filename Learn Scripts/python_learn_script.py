@@ -259,3 +259,16 @@ for i in range(0, n):
 #range(stop) - range from 0 to stop with a step of 1
 #range(start, stop) - range from start to stop with a step of 1
 #range(start, stop, step) - range from start to stop with a step of step
+
+
+
+#CLASSES
+#to define a class, all you need to do is:
+class class_name:
+#you can also use inheritance with parentheses
+class class_name(parent_class):
+#usually have an init method:
+#this will run when the object is created
+	def __init__(self, *, **):		#self is implied, * = args and ** = kwargs (bad convention)
+	def __init__(self, *args, **kwargs):	#args = any # of variables, kwargs = keyword arguments (dictionaries)
+	#all of these names are not necessary, they are just convention. Could rename them as anything else
