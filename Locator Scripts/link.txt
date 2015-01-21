@@ -1,0 +1,47 @@
+#executables
+chrome       $ exe $ "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+7z           $ exe $ "C:\Program Files\7-Zip\7zFM.exe"
+delphi       $ exe $ "C:\Program Files (x86)\Borland\Delphi7\Bin\delphi32.exe"
+d7           $ exe $ "C:\Program Files (x86)\Borland\Delphi7\Bin\delphi32.exe"
+daemon       $ exe $ "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe"
+tasks        $ exe $ "C:\WINDOWS\system32\taskmgr.exe"
+notepad++    $ exe $ "C:\Program Files (x86)\Notepad++\notepad++.exe"
+sublime      $ exe $ "C:\Program Files\Sublime Text 3\sublime_text.exe"
+st           $ exe $ "C:\Program Files\Sublime Text 3\sublime_text.exe"
+firefox      $ exe $ "C:\Program Files (x86)\Mozilla Firefox\firefox.exe"
+eclipse      $ exe $ "C:\Users\mikhail.andreev\Desktop\Programs\Eclipse Luna\eclipse\eclipse.exe"
+android      $ exe $ "C:\Users\mikhail.andreev\Desktop\Programs\Android\eclipse\eclipse.exe"
+vmplayer     $ exe $ "C:\Program Files (x86)\VMware\VMware Player\vmplayer.exe"
+source       $ exe $ "C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe"
+itunes       $ exe $ "C:\Program Files (x86)\iTunes\iTunes.exe"
+araxis       $ exe $ "C:\Program Files (x86)\Araxis\Araxis Merge\Merge.exe"
+merge        $ exe $ "C:\Program Files (x86)\Araxis\Araxis Merge\Merge.exe"
+vlc          $ exe $ "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
+virtualbox   $ exe $ "C:\Program Files\Oracle\VirtualBox\VirtualBox.exe"
+bitdefender  $ exe $ "C:\Program Files\Bitdefender\Antivirus Free Edition\gziface.exe"
+evernote     $ exe $ "C:\Program Files (x86)\Evernote\Evernote\Evernote.exe"
+kds101       $ exe $ "C:\Freescale\KDS_1.0.1\eclipse\eclipse.exe"
+kds102       $ exe $ "C:\Freescale\KDS_1.0.2\eclipse\eclipse.exe"
+kds110       $ exe $ "C:\Freescale\KDS_1.1.0\eclipse\kinetis-design-studio.exe"
+prog12z      $ exe $ "C:\PEMicro\PKG12Z\prog12z.exe"
+progacmp     $ exe $ "C:\PEMicro\PROGACMP\ProgACMP.exe"
+progdsc      $ exe $ "C:\PEMicro\cyclone_max\progdsc_max.exe"
+icd12z       $ exe $ "C:\PEMicro\PKG12Z\icd12z.exe"
+log2phy      $ exe $ "C:\PEMicro\PKG12Z\Log2Phy_12.exe"
+
+
+#explorer
+#desk         $ loc $ "C:\Users\mikhail.andreev\Desktop"
+#dx           $ loc $ "C:\Users\mikha_000\Dropbox"
+#dropbox      $ loc $ "C:\Users\mikha_000\Dropbox"
+#scripts      $ loc $ "D:\Scripts"
+#javalib      $ loc $ "D:\Programming\Java\Libraries"
+#catan        $ loc $ "D:\Projects\Browser-Based Catan"
+#projects     $ loc $ "D:\Projects"
+
+
+
+#special
+edit         $ spec $ "start C:\WINDOWS\system32\cmd.exe /c "sublime_text C:\Users\mikhail.andreev\Desktop\Files\Scripts\rr.bat"
+git			 $ spec $ "C:\WINDOWS\system32\cmd.exe /c ""C:\Program Files (x86)\Git\bin\sh.exe" --login -i""
+install      $ spec $ "start C:\WINDOWS\system32\cmd.exe /c "sublime_text "C:\Users\mikhail.andreev\Desktop\Files\Installation Code.txt"
